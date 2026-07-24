@@ -5,9 +5,13 @@ platforms** — Twitter/X, Instagram, TikTok, LinkedIn, YouTube, Facebook,
 Threads, Bluesky, Pinterest, Mastodon, Telegram, and Google Business Profile —
 through [Schedulala](https://schedulala.com).
 
-<!-- DEMO VIDEO PLACEHOLDER: connect-demo.gif goes here -->
-> 🎬 Demo video coming soon — watch the connector go from zero to a scheduled
-> post in under a minute.
+<p align="center">
+  <img src="assets/connect-demo.gif" width="360" alt="Connecting Schedulala to Claude: Settings → Connectors → Add custom connector → paste https://schedulala.com/api/mcp — set up in two minutes" />
+</p>
+<p align="center">
+  <a href="https://schedulala.com/videos/connect-claude.mp4">Full-quality video</a> ·
+  <a href="https://schedulala.com/integrations/claude">schedulala.com/mcp</a>
+</p>
 
 ## The fastest path: the hosted connector (claude.ai / Claude Desktop)
 
