@@ -6,10 +6,14 @@ Threads, Bluesky, Pinterest, Mastodon, Telegram, and Google Business Profile —
 through [Schedulala](https://schedulala.com).
 
 <p align="center">
-  <img src="assets/connect-demo.gif" width="360" alt="Connecting Schedulala to Claude: Settings → Connectors → Add custom connector → paste https://schedulala.com/api/mcp — set up in two minutes" />
+  <img src="assets/connect-demo.gif" width="300" alt="Connecting Schedulala to Claude: Settings → Connectors → Add custom connector → paste https://schedulala.com/api/mcp — set up in two minutes" />
+  &nbsp;&nbsp;
+  <img src="assets/posting-demo.gif" width="300" alt="Posting from one chat: drop food photos into the upload widget, Claude drafts 7 per-platform posts with previews, then schedules them across the week" />
 </p>
 <p align="center">
-  <a href="https://schedulala.com/videos/connect-claude.mp4">Full-quality video</a> ·
+  <em>Set up in two minutes — then post everywhere from one chat.</em><br />
+  <a href="https://schedulala.com/videos/connect-claude.mp4">Setup video</a> ·
+  <a href="https://schedulala.com/videos/posting-restaurant.mp4">Posting video</a> ·
   <a href="https://schedulala.com/integrations/claude">schedulala.com/mcp</a>
 </p>
 
