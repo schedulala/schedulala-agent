@@ -1,0 +1,18 @@
+{
+  "_comment": "create_post: multi-platform with per-platform settings. The instagram entry uses the object form with accountId — REQUIRED when more than one account is connected on a platform (otherwise the API returns a 400 listing the choices). Get accountId values from list_accounts.",
+  "content": "Our summer menu is live. Fresh, local, and only around for eight weeks.",
+  "platforms": [
+    { "platform": "instagram", "accountId": "acc_1234567890" },
+    "facebook",
+    { "platform": "linkedin", "content": "Seasonal menus are our favorite supply-chain puzzle. Here's what made the cut this summer." },
+    "pinterest"
+  ],
+  "mediaItems": [
+    { "type": "image", "url": "https://cdn.example.com/summer-menu-1.jpg", "caption": "Summer menu board" },
+    { "type": "image", "url": "https://cdn.example.com/summer-menu-2.jpg" }
+  ],
+  "queue": true,
+  "platformSettings": {
+    "pinterest": { "boardName": "Seasonal Menus", "link": "https://example.com/menu" }
+  }
+}

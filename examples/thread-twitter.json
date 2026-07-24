@@ -1,0 +1,16 @@
+{
+  "_comment": "create_thread: 2-25 ordered entries on twitter/threads/bluesky/mastodon only; max 1 media item per entry; consumes one post of quota PER ENTRY; the whole chain publishes from ONE postId (use get_post on it).",
+  "platforms": ["twitter"],
+  "scheduledFor": "2026-08-02T14:00:00Z",
+  "posts": [
+    { "content": "How we cut our cloud bill 40% in one quarter — a thread. 1/4" },
+    { "content": "Step one: we measured. You cannot cut what you cannot see. 2/4" },
+    {
+      "content": "Step two: right-sizing. This chart says it all. 3/4",
+      "mediaItems": [
+        { "type": "image", "url": "https://cdn.example.com/costs-chart.png" }
+      ]
+    },
+    { "content": "Step three: reserved capacity for the boring, stable stuff. Full writeup on the blog. 4/4" }
+  ]
+}

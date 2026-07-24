@@ -1,0 +1,7 @@
+{
+  "_comment": "create_post: one platform, scheduled. scheduledFor must be 5 minutes to 90 days out.",
+  "content": "We just shipped dark mode! Try it and tell us what you think.",
+  "platforms": ["twitter"],
+  "scheduledFor": "2026-08-01T15:00:00Z",
+  "timezone": "America/New_York"
+}

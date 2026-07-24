@@ -1,0 +1,32 @@
+{
+  "_comment": "bulk_create_posts: up to 25 create_post-shaped entries. CONSUMES POST QUOTA per successful post, not per request; validation failures are reported per-index and do not consume quota. TikTok entries still need privacy + postMode.",
+  "timezone": "America/New_York",
+  "posts": [
+    {
+      "content": "Monday motivation: ship something small today.",
+      "platforms": ["twitter", "linkedin"],
+      "scheduledFor": "2026-08-03T13:00:00Z"
+    },
+    {
+      "content": "New tutorial is up — link in bio.",
+      "platforms": [{ "platform": "instagram", "accountId": "acc_1234567890" }],
+      "mediaItems": [{ "type": "image", "url": "https://cdn.example.com/tutorial-cover.jpg" }],
+      "scheduledFor": "2026-08-04T16:30:00Z"
+    },
+    {
+      "content": "Fediverse friends: we read every reply here.",
+      "platforms": ["mastodon"],
+      "scheduledFor": "2026-08-05T18:00:00Z",
+      "platformSettings": { "mastodon": { "visibility": "public" } }
+    },
+    {
+      "content": "Friday demo day clip",
+      "platforms": ["tiktok"],
+      "mediaItems": [{ "type": "video", "url": "https://cdn.example.com/demo-day.mp4" }],
+      "scheduledFor": "2026-08-07T20:00:00Z",
+      "platformSettings": {
+        "tiktok": { "privacy": "PUBLIC_TO_EVERYONE", "postMode": "direct" }
+      }
+    }
+  ]
+}

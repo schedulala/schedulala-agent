@@ -1,0 +1,15 @@
+{
+  "_comment": "create_post: TikTok requires BOTH platformSettings.tiktok.privacy AND postMode ('direct' or 'inbox') — there is no default; ask the user which they want.",
+  "content": "Behind the scenes of our newest recipe drop",
+  "platforms": ["tiktok"],
+  "mediaItems": [
+    { "type": "video", "url": "https://cdn.example.com/recipe-bts.mp4" }
+  ],
+  "publishNow": true,
+  "platformSettings": {
+    "tiktok": {
+      "privacy": "PUBLIC_TO_EVERYONE",
+      "postMode": "direct"
+    }
+  }
+}

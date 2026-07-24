@@ -1,0 +1,23 @@
+{
+  "name": "schedulala",
+  "owner": {
+    "name": "Schedulala",
+    "email": "hello@schedulala.com",
+    "url": "https://schedulala.com"
+  },
+  "metadata": {
+    "description": "Official Schedulala agent skill — social media scheduling for AI agents",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "schedulala",
+      "source": "./",
+      "description": "Schedule and publish social posts to 12 platforms with Schedulala: safe publishing workflow, per-platform rules, media handling, analytics, engagement.",
+      "author": { "name": "Schedulala", "url": "https://schedulala.com" },
+      "homepage": "https://schedulala.com/developers/docs",
+      "license": "MIT",
+      "keywords": ["social-media", "scheduler", "mcp", "agent-skills"]
+    }
+  ]
+}

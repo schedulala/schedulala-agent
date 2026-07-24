@@ -1,0 +1,14 @@
+{
+  "name": "schedulala",
+  "description": "Schedule and publish social media posts to 12 platforms (Twitter/X, Instagram, TikTok, LinkedIn, YouTube, Facebook, Threads, Bluesky, Pinterest, Mastodon, Telegram, Google Business) with Schedulala — safe publishing workflow, per-platform rules, media handling, analytics, and engagement.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Schedulala",
+    "email": "hello@schedulala.com",
+    "url": "https://schedulala.com"
+  },
+  "homepage": "https://schedulala.com/developers/docs",
+  "repository": "https://github.com/schedulala/schedulala-agent",
+  "license": "MIT",
+  "keywords": ["social-media", "scheduler", "mcp", "agent-skills", "claude"]
+}
