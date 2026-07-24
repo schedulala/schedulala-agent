@@ -12,8 +12,13 @@ through [Schedulala](https://schedulala.com).
 </p>
 <p align="center">
   <em>Set up in two minutes — then post everywhere from one chat.</em><br />
-  <a href="https://schedulala.com/videos/connect-claude.mp4">Setup video</a> ·
-  <a href="https://schedulala.com/videos/posting-restaurant.mp4">Posting video</a> ·
+  <a href="https://schedulala.com/videos/mcp-launch-45s.mp4">Full 45s demo (sound on)</a> ·
+  <a href="https://schedulala.com/videos/connect-claude.mp4">Setup</a> ·
+  <a href="https://schedulala.com/videos/posting-restaurant.mp4">Posting</a> ·
+  <a href="https://schedulala.com/videos/comments-restaurant.mp4">Comments</a> ·
+  <a href="https://schedulala.com/videos/bulk-restaurant.mp4">Bulk</a> ·
+  <a href="https://schedulala.com/videos/besttimes-restaurant.mp4">Best times</a> ·
+  <a href="https://schedulala.com/videos/analytics-restaurant.mp4">Analytics</a> ·
   <a href="https://schedulala.com/integrations/claude">schedulala.com/mcp</a>
 </p>
 
