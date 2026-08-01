@@ -6,18 +6,29 @@ Node.js 18+, zero runtime dependencies.
 ## Auth
 
 ```bash
-# Interactive device flow: browser opens to schedulala.com (magic link),
-# user enters the printed verification code; key saved to ~/.schedulala/config.json
+# Device flow — the CLI PRINTS a code + https://schedulala.com/developers/verify;
+# the USER opens that URL (sign-in via magic link, SAME email) and enters the
+# code. The CLI does not open a browser and never prompts on stdin; it polls
+# up to 15 min, then saves the key to ~/.schedulala/config.json.
 schedulala init --email you@example.com
+# --json emits TWO JSON documents (code+URL first, completion later) —
+# stream-parse them; JSON.parse on the whole stdout fails.
 
-# Non-interactive
+# Non-interactive (user already has a key)
 export SCHEDULALA_API_KEY=sk_live_...
-schedulala whoami
+schedulala whoami --json          # exit 0 = ready · exit 2 = missing/bad key
+
+# Or persist the key without env
+schedulala config set api_key sk_live_...
 ```
 
 Key priority: `--api-key` flag > `SCHEDULALA_API_KEY` env > config file.
 Base URL priority: `--base-url` > `SCHEDULALA_API_URL` env > config `base_url`.
 Config file: `~/.schedulala/config.json` (mode 0600).
+
+A fresh init key lands on the free taster: 2 connected accounts, 4 free
+posts (lifetime — never resets), no posting to X. Existing subscribers get
+their paid plan on the same key.
 
 `sk_test_` keys are sandbox: simulated posting, no quota burn. `--sandbox`
 errors fast on a live key (sandbox is decided server-side by key prefix).
@@ -45,6 +56,15 @@ errors fast on a live key (sandbox is decided server-side by key prefix).
 Scheduling (pick one): `--now`, `--schedule <ISO8601>`, `--draft`, `--queue`.
 **Default when none is given = draft.**
 
+`--platforms` entries are `platform` or `platform=accountId` — the id form is
+REQUIRED when more than one account is connected on that platform (the API
+400s listing the choices otherwise). Ids come from `schedulala accounts
+--json`; `=` is the separator because ids can contain `:` (Bluesky DIDs).
+
+```bash
+schedulala post "hi" --platforms "bluesky=did:plc:xyz,twitter" --now --json
+```
+
 - `--media <url[,url…]>` — public URLs; type inferred from extension
   (mp4/mov/webm/m4v/avi = video, else image).
 - `--platform-content '<json>'` — per-platform text, e.g.
@@ -53,6 +73,11 @@ Scheduling (pick one): `--now`, `--schedule <ISO8601>`, `--draft`, `--queue`.
   `'{"tiktok":{"privacy":"PUBLIC_TO_EVERYONE","postMode":"direct"}}'`.
   (Content and settings are merged into one platformSettings object;
   settings win on key conflicts.)
+- `--first-comment "<text>"` — auto-post this as the first comment ~15s
+  after publishing (linkedin, facebook, instagram, youtube, twitter,
+  threads, bluesky, mastodon; text + links only).
+- `--first-comments '<json>'` — advanced array form
+  `'[{"target":0,"text":"…"}]'` (thread targets apply via the threads API).
 - `--brand-id <id>`, `--timezone <IANA>`, `--idempotency-key <key>`
   (sent as an `Idempotency-Key` header — use it to prevent duplicate posts),
   `--sandbox`.

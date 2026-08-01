@@ -1,0 +1,1 @@
+skills/schedulala/SKILL.md
