@@ -51,6 +51,10 @@ Setup guide: https://schedulala.com/developers/docs/claude-connector
 
 ## Install the skill (Claude Code, Codex, and other agent CLIs)
 
+Or just point your agent at the hosted skill file — one line, no install:
+
+> Read https://schedulala.com/SKILL.md and follow it to set up Schedulala.
+
 Pick one:
 
 ```bash
