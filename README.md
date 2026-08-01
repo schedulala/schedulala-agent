@@ -1,8 +1,10 @@
 <div align="center">
 
+<img src="assets/logo.png" width="72" alt="Schedulala logo" />
+
 # Schedulala
 
-### Your agent posts. Everywhere.
+### Your agent posts. Replies. Measures. Listens.
 
 **12 Platforms. Any Agent. One Prompt.**
 
@@ -16,12 +18,14 @@
 
 ---
 
-Schedulala teaches any AI agent to schedule and publish social media posts to
-**12 platforms** — Twitter/X, Instagram, TikTok, LinkedIn, YouTube, Facebook,
-Threads, Bluesky, Pinterest, Mastodon, Telegram, and Google Business Profile —
-including **first comments on 8 of them through one API field**. The skill was
-tested against genuinely cold agents until one installed, connected, and
-posted with zero human help.
+Schedulala teaches any AI agent to run your social media end to end: schedule
+and publish to **12 platforms** — Twitter/X, Instagram, TikTok, LinkedIn,
+YouTube, Facebook, Threads, Bluesky, Pinterest, Mastodon, Telegram, and Google
+Business Profile — with **first comments on 8 of them through one API field**,
+every post **validated against each platform's character limits and media
+rules before anything publishes**, plus analytics, comment triage, and keyword
+listening from the same conversation. The skill was tested against genuinely
+cold agents until one installed, connected, and posted with zero human help.
 
 ## Quick start
 
