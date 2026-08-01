@@ -1,0 +1,13 @@
+{
+  "_comment": "create_post with an auto-posted first comment — the 'link in the first comment' workflow. The comment publishes ~15s after the post on every supported platform (linkedin, facebook, instagram, youtube, twitter, threads, bluesky, mastodon). firstComment is the string shorthand for firstComments: [{\"target\": 0, \"text\": \"...\"}].",
+  "content": "Fresh sourdough recipe is live! Step-by-step photos included.",
+  "platforms": [
+    { "platform": "facebook", "accountId": "acc_fb_page_123" },
+    { "platform": "linkedin", "accountId": "acc_li_456" }
+  ],
+  "mediaItems": [
+    { "type": "image", "url": "https://example.com/sourdough.jpg" }
+  ],
+  "firstComment": "Full recipe with measurements: https://example.com/blog/sourdough-recipe",
+  "publishNow": true
+}

@@ -5,8 +5,9 @@ description: >
   TikTok, LinkedIn, YouTube, Facebook, Threads, Bluesky, Pinterest, Mastodon,
   Telegram, Google Business Profile) with Schedulala. Use when the user wants to
   create, schedule, preview, or bulk-plan social posts, post photos/videos/PDFs,
-  check post status or analytics, reply to or moderate comments, monitor
-  keywords, or repurpose YouTube videos. Works through the hosted Schedulala MCP
+  auto-post a first comment (link-in-first-comment), check post status or
+  analytics, reply to or moderate comments, monitor keywords, or repurpose
+  YouTube videos. Works through the hosted Schedulala MCP
   connector (claude.ai / ChatGPT, with interactive post-preview, analytics,
   calendar, inbox, and media-upload widgets), the local @schedulala/mcp-server
   (Claude Desktop, Claude Code, Cursor), or the schedulala CLI. Encodes the
@@ -87,6 +88,16 @@ Bulk: `bulk_create_posts` takes up to 25 create_post-shaped entries.
 Threads (chains): `create_thread`, 2–25 entries, on twitter / threads /
 bluesky / mastodon only, max 1 media item per entry; the whole chain publishes
 from ONE postId — `get_post` that id for status.
+
+**First comment (auto-plug)**: pass `firstComment` (plain string) or
+`firstComments` (`[{target, text}]`) on `create_post` / `bulk_create_posts` /
+`create_thread` to auto-post a comment ~15 seconds after publishing — the
+"link in the first comment" workflow. Supported on linkedin, facebook,
+instagram, youtube, twitter, threads, bluesky, mastodon (NOT tiktok /
+pinterest / telegram / google-business — no comment API). Text and links
+only. Comment limits differ from post limits — see
+[references/platforms.md](references/platforms.md). A failed comment never
+fails the post; `get_post` reports delivery per platform.
 
 **Quota**: threads and bulk consume post quota PER ENTRY (a 5-entry thread = 5
 posts). Validation and account-resolution failures don't burn quota. Check

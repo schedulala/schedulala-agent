@@ -34,6 +34,38 @@ YouTube and Pinterest don't use the main content limit the same way: YouTube
 takes a title (≤100 chars) + description (≤5000 chars) via platformSettings;
 Pinterest takes a title (≤100) + description (≤500).
 
+## First comments (auto-plug)
+
+Top-level `firstComments` (or the `firstComment` string shorthand) on
+`create_post` / `bulk_create_posts` / `create_thread` / `update_post` — NOT
+inside platformSettings. Auto-posted ~15 seconds after the post publishes:
+the "link in the first comment" workflow. Text and links only, no media.
+A failed comment never fails the post — read `platforms[].firstComments` on
+`get_post` for delivery status (posted with the comment url, failed, skipped).
+
+| Platform | First comment | Comment limit |
+|---|---|---|
+| linkedin | ✅ | 1500 chars |
+| facebook | ✅ | no fixed limit |
+| instagram | ✅ | 1000 UTF-8 bytes (skipped on Stories) |
+| youtube | ✅ | 10000 chars |
+| twitter | ✅ | 280 chars (Premium limits apply per account) |
+| threads | ✅ | 500 chars |
+| bluesky | ✅ | 300 chars |
+| mastodon | ✅ | instance-defined |
+| tiktok | ❌ no comment API | — |
+| pinterest | ❌ no comment API | — |
+| telegram | ❌ no comment API | — |
+| google-business | ❌ no comment API | — |
+
+- Targeting ONLY unsupported platforms with a first comment is a validation
+  error; mixed selections publish where supported and warn about the rest.
+- `firstComments` entries are `{ "target": 0, "text": "…" }`. target 0 = the
+  main post; on `create_thread`, target i = entry i+1 (max target =
+  entries − 1), and thread-targeted comments deliver on twitter / threads /
+  bluesky only (mastodon takes just the target-0 comment).
+- An empty `firstComments` array on `update_post` clears pending comments.
+
 ## tiktok — BOTH fields required, no defaults
 
 ```json
